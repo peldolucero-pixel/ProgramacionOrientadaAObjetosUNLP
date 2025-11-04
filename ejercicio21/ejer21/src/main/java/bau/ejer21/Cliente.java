@@ -17,9 +17,12 @@ public abstract class Cliente {
 		this.envios.add(envio);
 	}
 	
+	
+	
 	public double calcularMontoEnPerido(LocalDate inicio, LocalDate fin) {
+		DataLapse lapso = new DataLapse(inicio,fin);
 		return envios.stream()
-			.filter(envio -> envio.getFecha().isBefore(fin) && envio.getFecha().isAfter(inicio))
+			.filter(envio -> lapso.includesDate(envio.getFecha()))
 			.mapToDouble(envio -> envio.calcularCosto())
 			.sum();
 	}
