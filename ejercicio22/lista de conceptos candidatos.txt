@@ -1,0 +1,1 @@
+viandas, artículos de supermercado, nombre categoría,apta para celíacos y disponibilidad, precio, peso en Kg, stock actual, email, pedidos,solicitar, entrega, envió deliveri, fecha/hora, retiro sucursal, dni, sin tacc, descuento
