@@ -8,12 +8,14 @@ public class TestEnvioInternacional {
 	
 	@BeforeEach
 	void setUp() throws Exception{
-		envio = new EnvioInternacional(LocalDate.now(),"formosa", "la pampa", 50);
+		envio = new EnvioInternacional(LocalDate.now(),"formosa", "la pampa", 10);
 	}
 	
 	@Test
 	public void testCalcularCosto() {
-		assertEquals(envio.calcularCosto(),);
+		assertEquals(envio.calcularCosto(),5100);
+		envio.setEntregaRapida(true);
+		assertEquals(envio.calcularCosto(),5900);
 	}
 		
 	
